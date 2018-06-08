@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 
-use App\User;
+use App\Models\User;
 use JWTFactory;
 use JWTAuth;
 use Validator;
