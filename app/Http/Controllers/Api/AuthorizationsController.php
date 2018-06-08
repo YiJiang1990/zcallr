@@ -38,13 +38,13 @@ class AuthorizationsController extends Controller
 
     public function update()
     {
-        $token = JWTAuth::refresh(JWTAuth::getToken());
+        $token = JWTAuth::refresh();
         return $this->respondWithToken($token);
     }
 
     public function destroy()
     {
-        JWTAuth::invalidate(JWTAuth::getToken());
+        JWTAuth::invalidate();
         return $this->response->noContent();
     }
 }
